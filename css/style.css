@@ -1,0 +1,59 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+* {
+    list-style-type: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+header {
+    
+}
+
+section {
+
+
+}
+
+#input {
+    position: relative;
+}
+
+#input .bi-search {
+    position: absolute;
+    right: 88%;
+    top: 25%;
+    padding-bottom: 15px;
+}
+
+#background-image-1 {
+    position: relative;
+}
+
+#background-image-1 button.time {
+    position: absolute;
+    left: 5%;
+    top: 70%;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 13px;
+}
+
+nav ul li.active {
+    
+}
+
+nav ul {
+    overflow-x: auto;
+}
+
+article button {
+    border: 0;
+}
