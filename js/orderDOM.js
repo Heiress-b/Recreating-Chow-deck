@@ -95,7 +95,7 @@ function addFood(menuindex) {
             total: menuitem.price
         });
         updateLocalstorage()
-        document.getElementById('display-cart').innerHTML +=`<div id="display-cart" class="row d-none d-lg-block mt-4" style="margin-left: 1px;">
+        document.getElementById('display-cart').innerHTML +=`<div id="display-cart" class="row d-lg-block mt-4" style="margin-left: 1px;">
             <div class="d-flex">
                 <div class="col-6">
                     <b>Gracious Kitchen</b>
@@ -138,7 +138,7 @@ function addFood(menuindex) {
         console.log(cartdisplay)
         alert('your cart has been updated')
         let ordered_food = ""
-        ordered_food +=`<div id="display-cart" class="row d-none d-lg-block mt-4" style="margin-left: 1px;">
+        ordered_food +=`<div id="display-cart" class="row d-lg-block mt-4" style="margin-left: 1px;">
             <div class="d-flex">
                 <div class="col-6">
                     <b>Gracious Kitchen</b>
@@ -225,7 +225,6 @@ function updateLocalstorage () {
 }
 
 function sumCartTotal() {
-    // let totalCost = cart.reduce((accum, value) => accum + value.total, 0);
     let totalCost = 0;
     cart.forEach(cartItem => {
         totalCost += cartItem.total
@@ -237,6 +236,7 @@ function listCartItems() {
     let cartLi = '';
     if (cart.length == 0) {
         cartLi = `<li class="text-center" style="font-size: 80px;" id="cart-bg">your cart appears here!</li>`;
+        sumCartTotal()
     } else {
         cart.forEach((cartItem, index) => {
             cartLi += `
@@ -252,11 +252,14 @@ function listCartItems() {
                 <i onclick="removeFood(${index})"class="bi bi-trash" style="color: white;"></i>
             </div>
         </div>`
-        })
+        });
+        sumCartTotal()
+        
     }
 
     document.getElementById('display-cart').innerHTML = cartLi;
 }
 
 listCartItems()
+sumCartTotal()
 

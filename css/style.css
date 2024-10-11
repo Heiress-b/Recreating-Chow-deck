@@ -17,7 +17,7 @@ a:link {
         width: 100%;
         z-index: 1;
         background-color: white;
-        margin-top: 0;
+        margin-top: 0px;
     }
 }
 
@@ -55,7 +55,8 @@ header div .bi-cart {
 
 header div #count {
     position: absolute;
-    right: 13%;
+    right: 16%;
+    top: 2%;
 }
 
 #background-image-1 {
@@ -71,10 +72,6 @@ header div #count {
 nav ul li a {
     color: black;
     font-size: 13px;
-}
-
-nav ul li.active {
-    
 }
 
 nav ul {
