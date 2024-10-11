@@ -207,10 +207,10 @@ function displaycategory(category) {
 function removeFood(name) {
     let item = cart[name]
     let index = cart.find(cartitem => cartitem.name == item.name);
-    if(index < 0) {
+    if(index) {
         let notification = confirm('are you sure you would like to remove this item?')
         if(notification == true) {
-            cart.splice(index, 1)
+            cart.splice(index)
         }
     }
 }
