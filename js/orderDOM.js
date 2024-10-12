@@ -97,12 +97,7 @@ function addFood(menuindex) {
         updateLocalstorage()
         document.getElementById('display-cart').innerHTML +=`<div id="display-cart" class="row d-lg-block mt-4" style="margin-left: 1px;">
             <div class="d-flex">
-                <div class="col-6">
-                    <b>Gracious Kitchen</b>
-                </div>
-                <div class="col-6 text-end">
-                    <a href=""><button class="rounded-pill bg-success-subtle border-0 px-2">+ Add another pack</button></a>
-                </div>
+                <div id="display-total"></div>
             </div>
                 
             <div class="row rounded-2" style="border: 1px dashed; margin-left: 5px; padding: 10px 5px;">
@@ -127,7 +122,6 @@ function addFood(menuindex) {
                     </a>
                 </div>
             </div>
-            <div id="display-total"></div>
         </div>`
         cartNumber();
         sumCartTotal()
@@ -140,12 +134,7 @@ function addFood(menuindex) {
         let ordered_food = ""
         ordered_food +=`<div id="display-cart" class="row d-lg-block mt-4" style="margin-left: 1px;">
             <div class="d-flex">
-                <div class="col-6">
-                    <b>Gracious Kitchen</b>
-                </div>
-                <div class="col-6 text-end">
-                    <a href=""><button class="rounded-pill bg-success-subtle border-0 px-2">+ Add another pack</button></a>
-                </div>
+                <div id="display-total"></div>
             </div>
                 
             <div class="row rounded-2" style="border: 1px dashed; margin-left: 5px; padding: 10px 5px;">
@@ -229,14 +218,14 @@ function sumCartTotal() {
     cart.forEach(cartItem => {
         totalCost += cartItem.total
     });
-    document.getElementById('display-total').innerHTML = `Total Worth: $${totalCost}`;
+    document.getElementById('display-total').innerHTML = `<p style="font-size: 30px;"> Your Total Bill is: $${totalCost}</p>`;
 }
 
 function listCartItems() {
     let cartLi = '';
     if (cart.length == 0) {
         cartLi = `<li class="text-center" style="font-size: 80px;" id="cart-bg">your cart appears here!</li>`;
-        sumCartTotal()
+        // sumCartTotal()
     } else {
         cart.forEach((cartItem, index) => {
             cartLi += `
@@ -253,7 +242,7 @@ function listCartItems() {
             </div>
         </div>`
         });
-        sumCartTotal()
+        // sumCartTotal()
         
     }
 
