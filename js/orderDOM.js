@@ -8,15 +8,6 @@ let menu = [
     {name: 'noodles',   price: 1500, category: 'sides', image: 'indomie.jpg'}, {name: 'moi-moi & egg',  price: 3000, category: 'sides', image: 'moi-moi-with-egg.jpg'}, {name: 'spaghetti',  price: 3000, category: 'sides', image: 'spaghetti.jpg'}
 ];
 
-// let localCart = localStorage.getItem('mycart');
-// let cart = !localCart ? [] : JSON.parse(localCart);
-
-
-let payment_options = [
-    {value: 'Bank card'}, {value: 'Transfer'}, {value: 'crypto'}
-];
-
-
 function searchFood() {
     let searchInput = document.getElementById('enter-food-name');
     let food = searchInput.value.trim();
