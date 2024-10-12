@@ -37,7 +37,7 @@ function displayFood(food) {
                     </div>
                 </a>
             </div>
-            <button style="background-color: #0C513F; color: white;" class="rounded-3 px-2 py-1 border-0 mt-2 mb-3">add to cart</button>
+            <button style="background-color: #0C513F; color: white;" class="rounded-3 px-2 py-1 border-0 mt-2 mb-3 onclick="addFood('0')">add to cart</button>
         </div>`
         document.getElementById('display-menu').innerHTML = menuitem
         searchInput.value = ''
@@ -87,16 +87,15 @@ function addFood(menuindex) {
         });
         updateLocalstorage()
         document.getElementById('display-cart').innerHTML +=`<div id="display-cart" class="row d-lg-block mt-4" style="margin-left: 1px;">
-            <div class="d-flex">
-                <div id="display-total"></div>
-            </div>
-                
+                <div class="d-flex">
+                        <div id="display-total"></div>
+                    </div>
             <div class="row rounded-2" style="border: 1px dashed; margin-left: 5px; padding: 10px 5px;">
                 <div class="col-6">
-                    <p style="font-weight: bold;">Pack 1</p>
+                    <p style="font-weight: bold;">Preview your Order(s)</p>
                 </div>
                 <div class="col-6 text-end">
-                    <i onclick="removeFood()"class="bi bi-trash" style="color: red;"></i>
+                    <i onclick="removeFood('0')"class="bi bi-trash" style="color: red;"></i>
                 </div>
                 <div class="col-6">
                     Name: ${menuitem.name}
@@ -127,13 +126,13 @@ function addFood(menuindex) {
             <div class="d-flex">
                 <div id="display-total"></div>
             </div>
-                
+ 
             <div class="row rounded-2" style="border: 1px dashed; margin-left: 5px; padding: 10px 5px;">
                 <div class="col-6">
-                    <p style="font-weight: bold;">Pack 1</p>
+                    <p style="font-weight: bold;">Preview your Order(s)</p>
                 </div>
                 <div class="col-6 text-end">
-                    <i onclick="removeFood()"class="bi bi-trash" style="color: red;"></i>
+                    <i onclick="removeFood('0')"class="bi bi-trash" style="color: red;"></i>
                 </div>
                 <div class="col-6">
                     Dish: ${menuitem.name}
@@ -150,7 +149,6 @@ function addFood(menuindex) {
                     </a>
                 </div>
             </div>
-            <div id="display-total"></div>
         </div>`
         document.getElementById('display-cart').innerHTML = ordered_food
         updateLocalstorage();
@@ -193,6 +191,8 @@ function removeFood(name) {
             cart.splice(index)
             alert('your order has been removed')
         }
+        document.getElementById('display-cart').innerHTML = ''
+        updateLocalstorage()
     }
 }
 
