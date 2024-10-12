@@ -200,6 +200,7 @@ function removeFood(name) {
         let notification = confirm('are you sure you would like to remove this item?')
         if(notification == true) {
             cart.splice(index)
+            alert('your order has been removed')
         }
     }
 }
