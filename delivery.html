@@ -8,15 +8,27 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body style="background-color: beige;">
-    <form class="text-center">
+    <form style="margin-top: 100px;">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center w-50">
-                    <h6 class=" ">DELIVERY OPTIONS:</h6>
-                    <input type="text" placeholder="Enter Address" id="enter-add-name" class="border-0 mt-2 p-3 w-50"><br>
-                </div>
-                <div class="col-12 text-center">
-                    <input type="button" value="Set Delivery Location" class="rounded-3 px-3 py-2 border-0 mt-3 w-50" style="background-color: black; color: white; margin-right: 430px;" onclick="removeAttendee()">
+                <div class="col-12 w-50">
+                    <h6>DELIVERY OPTIONS:</h6>
+                    <select name="address" id="address" class="w-50">
+                        <option value="">Ikeja</option>
+                        <option value="">Mainland</option>
+                        <option value="">Lekki</option>
+                        <option value="">Ajah</option>
+                        <option value="">Alaba</option>
+                        <option value="">Glory's Estate</option>
+                        <option value="">Island</option>
+                        <option value="">Ketu</option>
+                        <option value="">Zenith Road</option>
+                        <option value="">Ojuelegba</option>
+            
+                    </select><br><br>
+                    <div class="col-12 text-center">
+                        <input type="button" value="Set Delivery Location" class="rounded-3 px-3 py-2 border-0 mt-3 w-50 text-center" style="background-color: black; color: white; margin-right: 430px;" onclick="removeAttendee()">
+                    </div>
                 </div>
             </div>
         </div>
