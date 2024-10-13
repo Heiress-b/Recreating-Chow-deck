@@ -190,9 +190,12 @@ function removeFood(name) {
         if(notification == true) {
             cart.splice(index)
             alert('your order has been removed')
+        
+            document.getElementById('display-cart').innerHTML = ''
+            updateLocalstorage()
+        }else{
+            addFood('index')
         }
-        document.getElementById('display-cart').innerHTML = ''
-        updateLocalstorage()
     }
 }
 
