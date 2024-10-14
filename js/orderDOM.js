@@ -223,7 +223,7 @@ function listCartItems() {
         // sumCartTotal()
     } else {
         cart.forEach((cartItem, index) => {
-            cartLi += `
+            cartLi += `<div id="display-total"></div>
             <div id="menu-item" class="col-12">
             <h4>Item: ${cartItem.name}</h4>
             <p>Price: $${cartItem.price}</p>
@@ -237,7 +237,7 @@ function listCartItems() {
             </div>
         </div>`
         });
-        // sumCartTotal()
+        sumCartTotal()
         
     }
 
