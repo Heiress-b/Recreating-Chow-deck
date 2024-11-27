@@ -7,33 +7,43 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
 </head>
-<body style="height: 50vh; width: 90%; background-color: beige;">
+<body style="height: 50vh;">
     <section>
-        <form class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h6 class=" ">NAME ON CARD:</h6>
-                        <input type="text" placeholder="Enter Card Name" id="enter-add-name" class="border-0 mt-2 p-3 w-50"><br>
-                    </div>
-                    <div class="col-12">
-                        <h6 class="pt-5">CARD NUMBER:</h6>
-                        <input type="text" placeholder="Enter Card Number" id="enter-search-name" class="shadow border-0 mt-2 p-3 rounded-3 w-50"><br>
-                    </div>
-                    <div class="col-12">
-                        <h6 class="pt-5">EXPIRATION DATE:</h6>
-                        <input type="text" placeholder="MM/YY" id="enter-display-name" class=" border-0 mt-2 p-3 w-50"><br>
-                    </div>
-                    <div class="col-12">
-                        <h6 class="pt-5">CARD CODE (CVV):</h6>
-                        <input type="text" placeholder="Enter CVV" id="enter-remove-name" class="border-0 mt-2 p-3 w-50"><br>
-                    </div>
-                    <div class="col-12">
-                        <input type="button" value="Proceed" class="rounded-5 px-3 py-2 border-0 mt-3" style="background-color: black; color: white; margin-right: 430px;" onclick="removeAttendee()">
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 offset-3">
+                    <form class="text-center mt-5 py-3" style="background-color: #0C513F;">
+                        <div id="payment-inputs" class="mt-3">
+                            <div class="col-12 d-flex justify-content-between align-items-center mt-3">
+                                <h6 class="ps-3">CARD NAME:</h6>
+                                <input type="text" placeholder="Enter Card Name" id="enter-add-name" class="border-0 form-control"><br>
+                            </div>
+                            <div class="col-12 d-flex justify-content-between align-items-center mt-3">
+                                <h6 class="ps-2">CARD NUMBER:</h6>
+                                <input type="text" placeholder="Enter Card Number" id="enter-search-name" class="border-0 form-control"><br>
+                            </div>
+                            <div class="col-12 d-flex justify-content-between align-items-center mt-3">
+                                <h6 class="ps-2">EXPIRATION DATE:</h6>
+                                <input type="text" placeholder="MM/YY" id="enter-display-name" class=" border-0 form-control"><br>
+                            </div>
+                            <div class="col-12 d-flex justify-content-between align-items-center mt-3">
+                                <h6 class="ps-2">CARD CODE (CVV):</h6>
+                                <input type="text" placeholder="Enter CVV" id="enter-remove-name" class="border-0 form-control"><br>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-dark px-3 py-2 border-0 mt-3" style="background-color: black; color: white;">Proceed</button>
+                            </div>
+                        </div>    
+                    </form>
                 </div>
-            </div>    
-        </form>
+            </div>
+        </div>
     </section>
+    <main>
+        <img src="/img/mastercard.jpg" alt="" height="200px">
+        <img src="/img/credit-cards.jpg" alt="" height="200px">
+        <img src="/img/mastercard.jpg" alt="" height="200px">
+        <img src="/img/credit-cards.jpg" alt="" height="200px">
+    </main>
 </body>
 </html>

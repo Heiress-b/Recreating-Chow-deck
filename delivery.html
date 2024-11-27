@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body style="background-color: beige;">
-    <form style="margin-top: 100px;">
+    <form style="margin-top: 200px;">
         <div class="container">
             <div class="row">
-                <div class="col-12 w-50">
-                    <h6>DELIVERY OPTIONS:</h6>
-                    <select name="address" id="address" class="w-50">
+                <div class="col-12 col-md-6 offset-3">
+                    <h6 class="text-center">DELIVERY OPTIONS:</h6>
+                    <select name="address" id="address" class="form-control w-70">
                         <option value="">Ikeja</option>
                         <option value="">Mainland</option>
                         <option value="">Lekki</option>
@@ -26,9 +26,7 @@
                         <option value="">Ojuelegba</option>
             
                     </select><br><br>
-                    <div class="col-12 text-center">
-                        <input type="button" value="Set Delivery Location" class="rounded-3 px-3 py-2 border-0 mt-3 w-50 text-center" style="background-color: black; color: white; margin-right: 430px;" onclick="removeAttendee()">
-                    </div>
+                    <button class=" btn btn-dark d-flex justify-content-center" style="color: white;">deliver now</button>
                 </div>
             </div>
         </div>

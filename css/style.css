@@ -110,3 +110,11 @@ section nav ul a li:hover {
 #menu-item p {
     color: white;
 }
+
+section form #payment-inputs input {
+    max-width: 70%;
+}
+
+section form #payment-inputs h6 {
+    color: white;
+}
